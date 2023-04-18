@@ -1,5 +1,37 @@
 @page
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Garcon.Index
+
+<style>
+    main{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .info{
+        width: 70vw;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+       
+    }
+
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 87vh;
+    }
+</style>
+
+<div class="home">
 <h1>Garçons Cadastrados</h1>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="info">
@@ -35,22 +67,4 @@
     </table>
 <p style="text-align:center"><a class="btn btn-primary" role="button" asp-page="./Create"> <strong>Cadastrar</strong></a></p>
 </div>
-
-
-<style>
-    main{
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .info{
-        width: 60vw;
-        text-align: center;
-        background-color: rgb(255, 255, 255);
-        padding: 10px;
-        border-radius: 5px;
-    }
-</style>
+</div>

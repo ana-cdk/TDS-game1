@@ -1,9 +1,29 @@
 @page "{id:int}"
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Produto.Edit
 
+<style>
+   .row{
+        display: flex;
+        justify-content: center;
+    }
+           
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 95vh;
+    }
+</style>
+
+<div class="home">
 <h1>Alterar Dados do Produto</h1>
 
-<hr/>
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -27,12 +47,7 @@
                 <span asp-validation-for="ProdutoModel.Preco" class="text-dange"></span>
             </div>
             <br/>
-            @* <div class="form-group">
-                <label asp-for="ProdutoModel.CategoriaId"></label>
-                <input asp-for="ProdutoModel.CategoriaId" class="form-control"/>
-                <span asp-validation-for="ProdutoModel.CategoriaId" class="text-dange"></span>
-            </div> *@
-            
+           
             <select asp-for="ProdutoModel.CategoriaId">
                 <option value="">Selecione uma categoria</option>
                 @foreach (var categoriaModel in Model.CategoriaList)
@@ -50,7 +65,7 @@
         </form>
     </div>
 </div>
-
+</div>
 
 @section Scripts
 {

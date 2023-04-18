@@ -1,8 +1,33 @@
 @page "{id:int}"
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Mesa.Edit
+
+<style>
+   .row{
+        display: flex;
+        justify-content: center;
+    }
+           
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 87vh;
+    }
+
+    .form-group{
+        text-align: left;
+    }
+</style>
+
+<div class="home">
 <h1>Alterar Dados da Mesa</h1>
 
-<hr/>
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -25,10 +50,11 @@
                 <span asp-validation-for="MesaModel.HoraAbertura" class="text-danger"></span>
             </div>
             <br/>
-            <div class="form-group">
+            <div class="form">
                 <input type="submit" class="btn btn-primary" value="Salvar"/>
                 <a asp-page="/Mesa/Index" class="btn btn-secondary"> Cancelar</a>
             </div>
         </form>
     </div>
+</div>
 </div>

@@ -1,6 +1,31 @@
 @page "{id:int}"
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Garcon.Details
 
+<style>
+    .info{
+        width: 600px;
+        background-color: rgb(173, 171, 171);
+        padding: 10px;
+        border-radius: 5px;
+        margin: auto;
+    }
+             
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 87vh;
+    }
+
+</style>
+
+<div class="home">
 <h1>Detalhes do Garçom: @Model.GarconModel.Nome</h1>
 
 <div class="info">
@@ -11,24 +36,4 @@
 </div>
 
 <p style="text-align:center"><a class="btn btn-primary" role="button" asp-page="Index"> <strong>Voltar</strong></a></p>
-
-<style>
-
-    main{
-        
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .info{
-        width: 60vw;
-        text-align: left;
-        background-color: rgb(201, 201, 201);
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-</style>
+</div>

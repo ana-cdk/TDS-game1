@@ -1,9 +1,29 @@
 @page "{id:int}"
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Atendimento.Edit
 
+<style>
+   .row{
+        display: flex;
+        justify-content: center;
+    }
+           
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 87vh;
+    }
+</style>
+
+<div class="home">
 <h1>Alterar Dados do Atendimento</h1>
 
-<hr/>
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -15,7 +35,7 @@
                 <div class="alert alert-success">@TempData["Mensagem"]</div>
                 }
             <label asp-for="AtendimentoModel.MesaId">Numero da Mesa</label></br>
-            <select asp-for="AtendimentoModel.MesaId" class="form-control">
+            <select asp-for="AtendimentoModel.MesaId" class="form-select">
                 <option value="">Selecione o número da Mesa</option>
                 @foreach (var mesaModel in Model.MesaList)
                 {
@@ -30,4 +50,5 @@
             </div>
         </form>
     </div>
+</div>
 </div>

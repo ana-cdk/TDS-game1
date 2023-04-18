@@ -1,12 +1,21 @@
 @page "{id:int}"
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Mesa.Delete
 
-<div>
+<style>
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 87vh;
+    }
+</style>
+
+<div class="home">
     <h1>Deseja realmente remover a mesa?</h1>
 
     <p><strong>Numero:</strong> @Model.MesaModel.Numero </p>
     <p><strong>Hora de Abertura:</strong> @Model.MesaModel.HoraAbertura </p>
-</div>
 
 <form method="post">
     <div class="form-group">
@@ -14,3 +23,4 @@
         <a asp-page="/Mesa/Index" class="btn btn-primary"> Voltar</a>
     </div>
 </form>
+</div>
