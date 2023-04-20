@@ -1,8 +1,8 @@
 
 # Descrição do Projeto
 
-Este projeto foi desenvolvido com o objetivo de criar um sistema de gerenciamento de pedidos de um restaurante. Nele, é possível criar atendimentos, incluir pedidos de produtos e realizar vendas.
-Pré-requisitos
+O objetivo deste projeto é desenvolver um sistema de gerenciamento de pedidos de um restaurante, que permita criar atendimentos, incluir pedidos de produtos e realizar vendas.
+Tendo com pré-requisitos o seguinte:
 
 # Para rodar este projeto é necessário ter instalado na máquina:
 
