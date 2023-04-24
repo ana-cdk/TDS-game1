@@ -1,0 +1,35 @@
+@page "{id:int}"
+@model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Categoria.Details
+
+<style>
+    .info{
+        width: 600px;
+        background-color: rgb(173, 171, 171);
+        padding: 10px;
+        border-radius: 5px;
+        margin: auto;
+    }
+           
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 87vh;
+    }
+</style>
+
+<div class="home">
+<h1>Detalhes da Categoria: @Model.CategoriaModel.Nome</h1>
+
+<div class="info">
+    <p><strong>Nome: </strong> @Model.CategoriaModel.Nome </p>
+    <p><strong>Descrição: </strong> @Model.CategoriaModel.Descricao </p>
+    <div aling="center"><a  class="btn btn-sm btn-primary" asp-page="Index"> Voltar </a></div>
+</div>
+</div>

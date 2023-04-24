@@ -1,0 +1,44 @@
+@page "{id:int}"
+@model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Mesa.Details
+
+<style>
+    .info{
+        width: 600px;
+        background-color: rgb(173, 171, 171);
+        padding: 10px;
+        border-radius: 5px;
+        margin: auto;
+    }
+             
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 87vh;
+    }
+</style>
+
+<div class="home">
+<h1>Detalhes do Mesa: @Model.MesaModel.Numero</h1>
+
+<div class="info">
+    <p><strong>Número: </strong> @Model.MesaModel.Numero </p>
+    <p><strong>Status: </strong> 
+    @if (@Model.MesaModel.Status){
+        <bm>Mesa Ocupada</bm>
+    } 
+    else 
+    {
+        <bm>Mesa Desocupada</bm>
+    }</p>
+    <p><strong>Hora da Abertura: </strong> @Model.MesaModel.HoraAbertura </p>
+</div>
+<p style="text-align:center"><a class="btn btn-primary" role="button" asp-page="Index"> <strong>Voltar</strong></a></p>
+</div>
+
