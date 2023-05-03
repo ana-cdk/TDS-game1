@@ -51,14 +51,19 @@
     {
         <form method="post">
         <a class="btn btn-sm btn-success" asp-page="/Pedido/Create" asp-route-id="@Model.AtendimentoModel.AtendimentoId"> Novo Pedido </a>
-        <input type="submit" class="btn btn-sm btn-danger" value="Fechar Atendimento"/>
+        <div class="botao">
+            <input type="submit" class="btn btn-sm btn-danger" value="Fechar Atendimento"/>
+        </div>
         </form>
     }
     @if (Model.AtendimentoModel.AtendimentoFechado is true)
-    {
-        <form method="post">
-        <input type="submit" class="btn btn-sm btn-primary" value="Abrir Atendimento"/>
-        </form>
+    {   
+        <div class="botao">
+            <form method="post">
+                <input type="submit" class="btn btn-sm btn-primary" value="Abrir Atendimento"/>
+            </form>    
+        </div>
+       
     }
     <br>
     <div aling="center"><a  class="btn btn-sm btn-primary" asp-page="Index"> Voltar </a></div>
