@@ -1,12 +1,15 @@
 @page
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Produto.Index
+
+<link rel="stylesheet" href="~/lib/css/estilo.css"/>
+
 <h1>Produtos Cadastrados</h1>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="info">
     <table class="table table-bordered table-sm table-hover-custom">
         <thead>
             <tr>
-                <td scope="col">ID Produto</td>
+                <td scope="col"> ID </td>
                 <td scope="col">Categoria</td>
                 <td scope="col">@Html.DisplayNameFor(model => model.ProdutoList[0].Nome) </td>
                 <td scope="col">@Html.DisplayNameFor(model => model.ProdutoList[0].Descricao)</td>
@@ -42,32 +45,3 @@
         </style>
 <p style="text-align:center"><a class="btn btn-primary" role="button" asp-page="./Create"> <strong>Cadastrar</strong></a></p>
 </div>
-
-
-
-<style>
-    main{
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        background-color: lightgray;
-    }
-
-    tbody tr td:last-child{
-        idth: 10vw;
-    }
-
-    tbody tr td:not(:nth-child(4)){
-        text-align: center;
-    }
-
-    .info{
-        width: 80vw;
-        text-align: center;
-        background-color: rgb(255, 255, 255);
-        padding: 10px;
-        border-radius: 5px;
-    }
-</style>

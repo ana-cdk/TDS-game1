@@ -1,15 +1,7 @@
 @page "{id:int}"
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Categoria.Delete
 
-<style>
-           .home{
-            background-color: lightgray;
-            text-align: center;
-            flex: 1 1;
-            padding: 30px 30px 30px 30px;
-            height: 87vh;
-           }
-</style>
+<link rel="stylesheet" href="~/lib/css/estilo.css"/>
 
 <div class="home">
 <div align="center">
@@ -18,7 +10,7 @@
     <p><strong>Nome:</strong> @Model.CategoriaModel.Nome </p>
     <p><strong>Descrição:</strong> @Model.CategoriaModel.Descricao </p>
 <form method="post">
-    <div class="form-group">
+    <div class="botao">
         <input type="submit" value="Sim" class="btn btn-danger"/>
         <a asp-page="/Categoria/Index" class="btn btn-primary"> Voltar</a>
     </div>
