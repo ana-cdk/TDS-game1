@@ -12,6 +12,7 @@ h1{
     text-align: center;
     flex: 1 1;
     padding: 30px 30px 30px 30px;
+    display: contents;
 }
 
 .form{
@@ -19,8 +20,10 @@ h1{
 }
 
 form{
-    width: 500px;
+    width: 900px;
     align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .form-control{
@@ -33,6 +36,7 @@ form{
 
 .botao{
     text-align: center;
+    
 }
 
 select{
