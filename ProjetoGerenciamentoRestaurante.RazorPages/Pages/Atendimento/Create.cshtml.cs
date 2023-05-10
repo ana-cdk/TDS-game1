@@ -29,10 +29,11 @@ namespace ProjetoGerenciamentoRestaurante.RazorPages.Pages.Atendimento
             try{
                 bool mesaOcupada = await _context.Mesa!.AnyAsync(m => m.MesaId == AtendimentoModel.MesaId && m.Status);
                 if (mesaOcupada) {
-                    // ModelState.AddModelError(string.Empty, "A mesa já está ocupada!");
+                    
                     TempData["Mensagem"] = "A mesa já está ocupada!!";
                     return RedirectToPage("/Atendimento/Create");
                 }
+                
                 AtendimentoModel.DataCriacao = DateTime.Now;
 
                 var mesaToUpdate = await _context.Mesa!.FindAsync(AtendimentoModel.MesaId);

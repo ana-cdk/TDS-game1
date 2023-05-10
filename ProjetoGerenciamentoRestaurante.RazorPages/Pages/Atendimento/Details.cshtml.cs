@@ -37,12 +37,9 @@ namespace ProjetoGerenciamentoRestaurante.RazorPages.Pages.Atendimento
             AtendimentoModel = atendimentoModel;
 
             var pedido_ProdutoList = await _context.Pedido_Produto
-            .Include(p => p.Pedido)
-                .ThenInclude(p => p!.Garcon)
-            .Include(p => p.Pedido)
-                .ThenInclude(p => p!.Atendimento)
-                    .ThenInclude(a => a!.Mesa)
-            .Include(p => p.Produto)
+            .Include(p => p.Pedido).ThenInclude(p => p!.Garcon)
+            .Include(p => p.Pedido).ThenInclude(p => p!.Atendimento)
+            .ThenInclude(a => a!.Mesa).Include(p => p.Produto)
             .Where(e => e.Pedido!.Atendimento!.AtendimentoId == id)
             .ToListAsync();
 
@@ -50,8 +47,8 @@ namespace ProjetoGerenciamentoRestaurante.RazorPages.Pages.Atendimento
             if(pedido_ProdutoList == null){
                 return NotFound();
             }
-            Pedido_ProdutoList = pedido_ProdutoList;
 
+            Pedido_ProdutoList = pedido_ProdutoList;
             return Page();
         }
 
@@ -59,8 +56,8 @@ namespace ProjetoGerenciamentoRestaurante.RazorPages.Pages.Atendimento
             if(!ModelState.IsValid){
                 return Page();
             }
-            var atendimentoToUpdate = await _context.Atendimento!.FindAsync(id);
 
+            var atendimentoToUpdate = await _context.Atendimento!.FindAsync(id);
             if(atendimentoToUpdate == null){
                 return NotFound();
             }
@@ -70,7 +67,6 @@ namespace ProjetoGerenciamentoRestaurante.RazorPages.Pages.Atendimento
 
                 atendimentoToUpdate.AtendimentoFechado = false;
                 atendimentoToUpdate.DataSaida = null;
-
                 var mesaAtual = await _context.Mesa!.FindAsync(mesaAtualId);
                 mesaAtual!.Status = true;
                 mesaAtual.HoraAbertura = DateTime.Now.AddHours(1);
@@ -89,7 +85,6 @@ namespace ProjetoGerenciamentoRestaurante.RazorPages.Pages.Atendimento
 
                 atendimentoToUpdate.AtendimentoFechado = true;
                 atendimentoToUpdate.DataSaida = DateTime.Now.AddHours(3);
-
                 var mesaAtual = await _context.Mesa!.FindAsync(mesaAtualId);
                 mesaAtual!.Status = false;
                 mesaAtual.HoraAbertura = null;

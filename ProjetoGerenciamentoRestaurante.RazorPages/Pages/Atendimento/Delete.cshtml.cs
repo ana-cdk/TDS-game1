@@ -20,21 +20,18 @@ namespace ProjetoGerenciamentoRestaurante.RazorPages.Pages.Atendimento
             if(id == null || _context.Atendimento == null){
                 return NotFound();
             }
+
             var atendimentoModel = await _context.Atendimento
-            .Include(p => p.Mesa)
-            .FirstOrDefaultAsync(e => e.AtendimentoId == id);
+            .Include(p => p.Mesa).FirstOrDefaultAsync(e => e.AtendimentoId == id);
 
             if(atendimentoModel == null){
                 return NotFound();
             }
 
             var pedido_ProdutoModel = await _context.Pedido_Produto!
-            .Include(p => p.Pedido)
-                .ThenInclude(p => p!.Garcon)
-            .Include(p => p.Pedido)
-                .ThenInclude(p => p!.Atendimento)
-                    .ThenInclude(a => a!.Mesa)
-            .Include(p => p.Produto)
+            .Include(p => p.Pedido).ThenInclude(p => p!.Garcon)
+            .Include(p => p.Pedido).ThenInclude(p => p!.Atendimento)
+            .ThenInclude(a => a!.Mesa).Include(p => p.Produto)
             .Where(e => e.Pedido!.Atendimento!.AtendimentoId == id)
             .FirstOrDefaultAsync();
 
