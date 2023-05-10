@@ -2,7 +2,28 @@
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Atendimento.Details
 @using System.Globalization
 
-<link rel="stylesheet" href="~/lib/css/estilo.css"/>
+<style>
+    .info{
+        width: 600px;
+        background-color: rgb(173, 171, 171);
+        padding: 10px;
+        border-radius: 5px;
+        margin: auto;
+    }
+             
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 87vh;
+    }
+</style>
 
 <div class="home">
 <h1>Atendimento: @Model.AtendimentoModel.AtendimentoId </h1>
@@ -24,8 +45,9 @@
         </thead>
         <tbody>
             
-            @foreach (var item in Model.Pedido_ProdutoList)
+                @foreach (var item in Model.Pedido_ProdutoList)
             {
+                
                 <tr>
                     <td>@item.Produto!.Nome</td>
                     <td align="center">@item.Produto!.Preco</td>
@@ -51,19 +73,17 @@
     {
         <form method="post">
         <a class="btn btn-sm btn-success" asp-page="/Pedido/Create" asp-route-id="@Model.AtendimentoModel.AtendimentoId"> Novo Pedido </a>
-        <div class="botao">
-            <input type="submit" class="btn btn-sm btn-danger" value="Fechar Atendimento"/>
-        </div>
+        <input type="submit" class="btn btn-sm btn-danger" value="Fechar Atendimento"/>
         </form>
+    @* <a class="btn btn-sm btn-danger active" type="submit" asp-route-id="@Model.AtendimentoModel.AtendimentoId" value="Fechar Atendimento">Fechar Atendimento</a> *@
     }
     @if (Model.AtendimentoModel.AtendimentoFechado is true)
-    {   
-        <div class="botao">
-            <form method="post">
-                <input type="submit" class="btn btn-sm btn-primary" value="Abrir Atendimento"/>
-            </form>    
-        </div>
-       
+    {
+        <form method="post">
+        @* <button type="submit" class="btn btn-sm btn-danger">Fechar Atendimento</button> *@
+        <input type="submit" class="btn btn-sm btn-primary" value="Abrir Atendimento"/>
+        </form>
+    @* <a class="btn btn-sm btn-danger active" type="submit" asp-route-id="@Model.AtendimentoModel.AtendimentoId" value="Fechar Atendimento">Fechar Atendimento</a> *@
     }
     <br>
     <div aling="center"><a  class="btn btn-sm btn-primary" asp-page="Index"> Voltar </a></div>

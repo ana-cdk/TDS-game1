@@ -1,7 +1,36 @@
 @page
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Mesa.Index
 
-<link rel="stylesheet" href="~/lib/css/estilo.css"/>
+<style>
+    main{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        background-color: lightgray;
+    }
+
+    .info{
+        width: 70vw;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+       
+    }
+
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 87vh;
+    }
+</style>
 
 <div class="home">
 <h1>Mesas Cadastradas</h1>
@@ -13,7 +42,7 @@
     <table class="table table-bordered table-sm table-hover-custom">
         <thead>
             <tr>
-                <th scope="col"> ID </th>
+                <th scope="col">ID Mesa</th>
                 <th scope="col">Número</th>
                 <th scope="col">Ocupada</th>
                 <th scope="col">Libera as</th>

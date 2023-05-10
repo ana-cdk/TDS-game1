@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carol\\Downloads\\TDS\\TDS_Gamificacao\\ProjetoGerenciamentoRestaurante.RazorPages\\ProjetoGerenciamentoRestaurante.RazorPages.csproj": {}
+    "D:\\Faculdade\\TDS\\Game1\\TDS-game1\\ProjetoGerenciamentoRestaurante.RazorPages\\ProjetoGerenciamentoRestaurante.RazorPages.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carol\\Downloads\\TDS\\TDS_Gamificacao\\ProjetoGerenciamentoRestaurante.RazorPages\\ProjetoGerenciamentoRestaurante.RazorPages.csproj": {
+    "D:\\Faculdade\\TDS\\Game1\\TDS-game1\\ProjetoGerenciamentoRestaurante.RazorPages\\ProjetoGerenciamentoRestaurante.RazorPages.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carol\\Downloads\\TDS\\TDS_Gamificacao\\ProjetoGerenciamentoRestaurante.RazorPages\\ProjetoGerenciamentoRestaurante.RazorPages.csproj",
+        "projectUniqueName": "D:\\Faculdade\\TDS\\Game1\\TDS-game1\\ProjetoGerenciamentoRestaurante.RazorPages\\ProjetoGerenciamentoRestaurante.RazorPages.csproj",
         "projectName": "ProjetoGerenciamentoRestaurante.RazorPages",
-        "projectPath": "C:\\Users\\carol\\Downloads\\TDS\\TDS_Gamificacao\\ProjetoGerenciamentoRestaurante.RazorPages\\ProjetoGerenciamentoRestaurante.RazorPages.csproj",
+        "projectPath": "D:\\Faculdade\\TDS\\Game1\\TDS-game1\\ProjetoGerenciamentoRestaurante.RazorPages\\ProjetoGerenciamentoRestaurante.RazorPages.csproj",
         "packagesPath": "C:\\Users\\carol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carol\\Downloads\\TDS\\TDS_Gamificacao\\ProjetoGerenciamentoRestaurante.RazorPages\\obj\\",
+        "outputPath": "D:\\Faculdade\\TDS\\Game1\\TDS-game1\\ProjetoGerenciamentoRestaurante.RazorPages\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carol\\AppData\\Roaming\\NuGet\\NuGet.Config",

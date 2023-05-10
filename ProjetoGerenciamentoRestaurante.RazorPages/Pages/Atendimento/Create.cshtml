@@ -1,7 +1,30 @@
 @page
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Atendimento.Create
 
-<link rel="stylesheet" href="~/lib/css/estilo.css"/>
+<style>
+    .row{
+        display: flex;
+        justify-content: center;
+    }
+           
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 87vh;
+    }
+
+    .form-control{
+        text-align: center;
+        width: fit-content;       
+    }
+</style>
 
 <div class="home">
 <h1>Cadastrar Atendimento</h1>
@@ -26,11 +49,12 @@
             </select>
             </div>
             <br/>
-            <div class="botao">
+            <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Salvar"/>
                 <a asp-page="/Atendimento/Index" class="btn btn-secondary"> Cancelar</a>
             </div>
         </form>
     </div>
 </div>
+
 </div>

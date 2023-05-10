@@ -1,7 +1,37 @@
 @page
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Garcon.Index
 
-<link rel="stylesheet" href="~/lib/css/estilo.css"/>
+<style>
+    main{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        background-color: lightgray;
+        padding-bottom: 64px;
+    }
+
+    .info{
+        width: 70vw;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 100vh;
+    }
+    
+</style>
 
 <div class="home">
 <h1>Garçons Cadastrados</h1>
@@ -12,7 +42,7 @@
     <table class="table table-bordered table-sm table-hover-custom">
         <thead>
             <tr>
-                <td scope="col"> ID </td>
+                <td scope="col">ID</td>
                 <td scope="col">@Html.DisplayNameFor(model => model.GarconList[0].Nome) </td>
                 <td scope="col">@Html.DisplayNameFor(model => model.GarconList[0].Sobrenome)</td>
                 <td scope="col">CPF</td>

@@ -1,7 +1,25 @@
 @page "{id:int}"
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Atendimento.Edit
 
-<link rel="stylesheet" href="~/lib/css/estilo.css"/>
+<style>
+   .row{
+        display: flex;
+        justify-content: center;
+    }
+           
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 87vh;
+    }
+</style>
 
 <div class="home">
 <h1>Alterar Dados do Atendimento</h1>
@@ -9,6 +27,7 @@
 <div class="row">
     <div class="col-md-4">
         <form method="post">
+            @* <div asp-validation-summary="ModelOnly" class="text-dange"></div> *@
             <input type="hidden" asp-for="AtendimentoModel.AtendimentoId"/>
             <div class="form-group">
                 @if(TempData["Mensagem"] != null)
@@ -25,7 +44,7 @@
             </select>
             </div>
             <br/>
-            <div class="botao">
+            <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Salvar"/>
                 <a asp-page="/Atendimento/Index" class="btn btn-secondary"> Cancelar</a>
             </div>

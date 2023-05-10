@@ -1,7 +1,29 @@
 @page "{id:int}"
 @model ProjetoGerenciamentoRestaurante.RazorPages.Pages.Garcon.Edit
 
-<link rel="stylesheet" href="~/lib/css/estilo.css"/>
+<style>
+   .row{
+        display: flex;
+        justify-content: center;
+    }
+           
+    h1{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .home{
+        background-color: lightgray;
+        text-align: center;
+        flex: 1 1;
+        padding: 30px 30px 30px 30px;
+        height: 87vh;
+    }
+
+    .form-group{
+        text-align: left;
+    }
+</style>
 
 <div class="home">
 <h1>Alterar Dados do Garçom</h1>
@@ -35,7 +57,7 @@
                 <span asp-validation-for="GarconModel.Telefone" type="number" class="text-dange"></span>
             </div>
             <br/>
-            <div class="botao">
+            <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Salvar"/>
                 <a asp-page="/Garcon/Index" class="btn btn-secondary"> Cancelar</a>
             </div>
